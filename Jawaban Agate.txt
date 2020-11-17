@@ -1,0 +1,75 @@
+Math
+
+1. A. Indonesia
+2. D. 10 million kg
+3. A. 1995
+4. C. The steepest fall in the consumption of chocobar follows the steepest increase in consumption
+5. A. Increase
+6. A. 1996
+7. C. 1997
+8. B. 2:1
+
+SQL
+Using MySQL
+
+1. 
+select author_name, sum(sold_copies) from authors
+join books
+on authors.book_name=books.book_name 
+group by author_name
+order by sum(sold_copies)
+asc limit 3;
+
+2.	
+select user_id, count(user_id) from event_log
+group by user_id
+having count(user_id) between 2001 and 3999 
+order by count(user_id)
+desc;
+
+3.
+select department_name, avg(salary) from employees
+join salaries
+on employees.employee_id = salaries.employee_id
+group by department_name
+having avg(salary) > 500; 
+
+4.
+select DEPOSITO_ID, AMOUNT, PERSON_DATA.PERSON_ID, PERSON_NAME from PERSON_DATA
+join DEPOSITO_AMOUNT
+on PERSON_DATA.PERSON_ID = DEPOSITO_AMOUNT.PERSON_ID
+order by PERSON_ID;
+
+Case Study
+
+1. What do you think is 2 most Important KP's that Tim must know to increase Game X Revenue?
+
+    Answer:
+    1. New User (with Pearson Correlation get 0.98 score)
+    2. Daily Active User (with Pearson Correlation get 0.99 score)
+    <br>
+
+
+2. What do you think is the problem of Game X?
+
+    Answer:
+    1. Decreasing New User which result in decreasing revenue
+    2. Decreasing DAU which result in decreasing revenue
+    3. Decreasing Paying User which result in decreasing revenue
+    4. Not routine marketing which result in decreasing paying user
+    5. Not routine in-game event which result in decreasing players
+    6. Splash screen issue which decrease churn rate for players
+    
+    
+3. What suggestion you will give as data analyst to help Tim increase both Performance and Revenue?
+
+    Answer:
+    1. Targeting new user and DAU for better revenue, we can do:
+        1. Fixing splash screen issue to make churn rate increase
+        2. Routine in-game event especially on holiday (christmas, new year, etc.)
+    2. Targeting paying user also contribute a lot for revenue, we can do:
+        1. Routine marketing, like using video, banner, carousel etc. 
+        2. Give in-game benefit for paid users 
+   
+
+
